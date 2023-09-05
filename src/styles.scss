@@ -1,1 +1,43 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  font-size: 62.5%;
+
+  --BACKGROUND_900: #232129;
+  --BACKGROUND_800: #212E38;
+  --BACKGROUND_700: #3E3B47;
+
+  --WHITE: #F4EDE8;
+  --ORANGE: #FF9000;
+
+  --GRAY_100: #999591;
+  --GRAY_300: #666360;
+
+  --RED: #FF002E;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--BACKGROUND_800);
+  color: var(--WHITE);
+  font-size: 1.6rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+button, a {
+  cursor: pointer;
+  transition: filter 0.2s;
+
+  &hover {
+    filter: brightness(0.9);
+  }
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
