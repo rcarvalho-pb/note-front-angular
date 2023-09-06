@@ -1,0 +1,15 @@
+<div class="noteItem" [style]="getStyles()">
+    <input
+        type="text"
+        [value]="value"
+        [readOnly]="!isNew"
+    >
+
+    <button
+        type="button"
+        (click)="onClick()"
+        [className]="getButtonText()"
+    >
+    <mat-icon aria-hidden="false" aria-label="Example home icon" [fontIcon]="getButtonIcon()"></mat-icon>
+    </button>
+</div>

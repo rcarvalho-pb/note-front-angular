@@ -1,0 +1,43 @@
+.noteItem {
+    display: flex;
+    align-items: center;
+
+    color: var(--GRAY_300);
+
+    margin-bottom: 8px;
+    border-radius: 10px;
+    padding-right: 16px;
+
+    > button {
+        border: none;
+        background: none;
+    }
+
+    .button-delete {
+        color: var(--RED)
+    }
+
+    .button-add {
+        color: var(--ORANGE)
+    }
+
+    > input {
+        height: 56px;
+        width: 100%;
+
+        padding: 12px;
+
+        color: var(--WHITE);
+        background: transparent;
+
+        border: none;
+
+        &::placeholder { 
+        color: var(--GRAY_300);
+        }
+
+        &:focus{
+        outline: 0;
+        }
+    }
+}
