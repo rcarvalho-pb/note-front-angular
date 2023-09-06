@@ -1,4 +1,7 @@
 <div class="input">
-  icon
-  <input type="text">
+  <mat-icon *ngIf="icon!==null" aria-hidden="false" aria-label="Example home icon" fontIcon={{icon}} style="width: 30%;"/>
+  <input
+    [type]="type"
+    [placeholder]="placeholder"  
+  />
 </div>

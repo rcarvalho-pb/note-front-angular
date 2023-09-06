@@ -1,0 +1,26 @@
+<div>
+  <form action="">
+    <h1>Someone's Notes</h1>
+    <p>Aplicação para salvar e gerenciar seus links úteis</p>
+
+    <app-input
+      [placeholder]="'E-mail'"
+      [type]="'text'"
+      [icon]="'mail'"
+    />
+    <app-input 
+      [placeholder]="'Senha'"
+      [type]="'password'"
+      [icon]="'vpn_key'"
+    />
+
+    <app-button 
+      [title]="'Entrar'"
+      (click)="handleSignin()"
+    />
+
+    <a href="">Criar conta</a>
+
+  </form>
+  <div class="Background"></div>
+</div>
