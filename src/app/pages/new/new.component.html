@@ -1,1 +1,20 @@
-<p>new works!</p>
+<div class="container">
+  <app-header />
+
+  <main>
+    <form action="">
+      <header>
+        <h1>Criar Nota</h1>
+        <a href="">Voltar</a>
+      </header>
+
+      <app-input [placeholder]="'Título'" />
+      <app-text-area [placeholder]="'Observações'" />
+      <app-section [title]="'Links Úteis'" />
+      <app-note-item *ngFor="let link of note?.links" [value]="link" />
+      <app-note-item
+        [placeholder]="'Novo Link'"
+      />
+    </form>
+  </main>
+</div>

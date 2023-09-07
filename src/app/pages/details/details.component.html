@@ -1,1 +1,30 @@
-<p>details works!</p>
+<div class="container">
+  <app-header />
+
+  <main>
+    <div class="content">
+      <app-button-text [title]="'Excluir Nota'" [isActive]="true" />
+
+      <h1>Introdução ao React</h1>
+
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi tempore consequuntur veniam laudantium unde non modi molestiae aut necessitatibus voluptatibus minus corporis nemo earum, magnam a nesciunt ab laborum! Quos?
+      </p>
+
+      <app-section [title]="'Links Úteis'" />
+      <ul class="links">
+        <li>Link 1</li>
+        <li>Link 2</li>
+        <li>Link 3</li>
+      </ul>
+
+      <app-section [title]="'Marcadores'" />
+      <div class="tags">
+        <app-tag [url]="'express'"/>
+        <app-tag [url]="'NodeJS'"/>
+      </div>
+
+      <app-button [title]="'Voltar'" />
+    </div>
+  </main>
+</div>

@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="brand">
+    <h1>Someone's Notes</h1>
+  </div>
+
+  <app-header />
+
+  <ul class="menu">
+    <li><app-button-text [title]="'Todos'" [isActive]="true" /></li>
+    <li><app-button-text [title]="'React'" /></li>
+    <li><app-button-text [title]="'NodeJS'" /></li>
+  </ul>
+
+  <div class="search">
+    <app-input [placeholder]="'Pesquisar pelo título'" [icon]="'search'"/>
+  </div>
+
+  <div class="content">
+    <app-section [title]="'Minhas Notas'">
+
+    </app-section>
+    <app-note *ngFor="let note of notes" [note]="note" />
+  </div>
+
+  <a class="newNote" href="">
+    <mat-icon class="icon" aria-hidden="false" aria-label="Example home icon" fontIcon="add"/>
+    Criar nota
+  </a>
+</div>

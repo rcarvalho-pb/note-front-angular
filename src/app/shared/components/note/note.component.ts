@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Note } from '../../model/note.model';
 
 @Component({
@@ -7,8 +7,6 @@ import { Note } from '../../model/note.model';
   styleUrls: ['./note.component.scss']
 })
 export class NoteComponent {
-  note: Partial<Note> = {
-    title: "Titulo",
-    description: "Descrição"
-  }
+  @Input() note!: Partial<Note>;
+  
 }

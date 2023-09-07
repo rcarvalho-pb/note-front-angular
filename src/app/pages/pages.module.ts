@@ -10,6 +10,8 @@ import { ProfileComponent } from './profile/profile.component';
 import { SigninComponent } from './signin/signin.component';
 import { SignupComponent } from './signup/signup.component';
 
+import { MatIconModule } from '@angular/material/icon';
+
 
 
 @NgModule({
@@ -23,7 +25,8 @@ import { SignupComponent } from './signup/signup.component';
   ],
   imports: [
     CommonModule,
-    ComponentsModule
+    ComponentsModule,
+    MatIconModule
   ],
   exports: [
     DetailsComponent,

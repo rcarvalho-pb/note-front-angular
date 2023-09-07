@@ -1,5 +1,9 @@
 <div class="input">
-  <mat-icon *ngIf="icon!==null" aria-hidden="false" aria-label="Example home icon" fontIcon={{icon}} style="width: 30%;"/>
+  <ng-template #name *ngIf="icon!==null" >
+    <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon={{icon}} style="width: 30%;"/>
+  </ng-template>
+  
+  
   <input
     [type]="type"
     [placeholder]="placeholder"  

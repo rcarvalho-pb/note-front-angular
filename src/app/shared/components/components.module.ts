@@ -7,10 +7,11 @@ import { NoteComponent } from './note/note.component';
 import { NoteItemComponent } from './note-item/note-item.component';
 import { SectionComponent } from './section/section.component';
 
-import {MatIconModule} from '@angular/material/icon';
 import { TagComponent } from './tag/tag.component';
 import { TextAreaComponent } from './text-area/text-area.component';
 import { InputComponent } from './input/input.component';
+
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [

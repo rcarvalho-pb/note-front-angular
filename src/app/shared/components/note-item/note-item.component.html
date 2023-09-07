@@ -1,8 +1,10 @@
 <div class="noteItem" [style]="getStyles()">
     <input
         type="text"
-        [value]="value"
-        [readOnly]="!isNew"
+        [readOnly]="isNew"
+        value="{{ value }}"
+        placeholder="{{ placeholder }}"
+    
     >
 
     <button

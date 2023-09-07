@@ -6,6 +6,6 @@ export interface Note {
   title: string,
   description: string,
   userId: number,
-  tags: Tag[],
-  links: Link[]
+  tags: Partial<Tag>[],
+  links: Partial<Link>[]
 }

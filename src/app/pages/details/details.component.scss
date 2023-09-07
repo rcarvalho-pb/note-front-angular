@@ -1,0 +1,62 @@
+.container {
+  width: 100%;
+  height: 100vh;
+
+  display: grid;
+  grid-template-rows: 105px auto;
+  grid-template-areas: 
+  "header"
+  "content";
+
+  > main {
+    grid-area: content;
+    overflow-y: scroll;
+    scrollbar-width: 1px;
+    padding: 64px 0;
+  }
+}
+
+.links {
+  list-style: none;
+
+  > li {
+    margin-top: 12px;
+
+    a {
+      color: var(--WHITE);
+    }
+  }
+}
+
+.content {
+  max-width: 550px;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+
+  > app-button-text:first-child {
+    align-self: end;
+  }
+
+  > h1 {
+    font-size: 3.6rem;
+    font-weight: 500;
+    padding-top: 64px;
+  }
+
+  > p {
+    font-size: 1.6rem;
+    margin-top: 16px;
+    text-align: justify;
+  }
+}
+
+.tags {
+  display: flex;
+}
+
+main::-webkit-scrollbar {
+  width: 0; /* Remove scrollbar space */
+  background: transparent; /* Optional: just make scrollbar invisible */
+}

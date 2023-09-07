@@ -1,1 +1,29 @@
-<p>signup works!</p>
+<body>
+  <div class="Background"></div>
+  <form action="">
+    <h1>Someone Notes</h1>
+    <p>Aplicação para salvar e gerenciar seus links úteis</p>
+
+    <h2>Crie sua conta</h2>
+
+    <app-input 
+      [placeholder]="'Nome'"
+      [type]="'text'"
+      [icon]="'account_circle'"
+    />
+    <app-input 
+      [placeholder]="'E-mail'"
+      [type]="'text'"
+      [icon]="'mail'"
+    />
+    <app-input 
+      [placeholder]="'E-mail'"
+      [type]="'text'"
+      [icon]="'vpn_key'"
+    />
+    <app-button
+      [title]="'Cadastrar'"
+    />
+    <a href="">Voltar para o login</a>
+  </form>
+</body>

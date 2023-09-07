@@ -1,4 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Note } from '../../model/note.model';
+
+export interface NoteItem {
+  value: string,
+  isNew: boolean
+}
 
 @Component({
   selector: 'app-note-item',
@@ -6,8 +12,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./note-item.component.scss']
 })
 export class NoteItemComponent {
-  value: string = "valor";
-  isNew: boolean = true;
+  @Input() value?: Partial<Note>;
+  @Input() placeholder?: string;
+  @Input() isNew?: boolean;
 
   onClick(): string {
     return "Clicou";
