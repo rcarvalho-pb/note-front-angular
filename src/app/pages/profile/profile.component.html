@@ -1,1 +1,24 @@
-<p>profile works!</p>
+<div class="container">
+  <header>
+    <a href="">
+      <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="arrow_back_ios" />
+    </a>
+  </header>
+
+  <form action="">
+    <div class="avatar">
+      <img src="../../../../assets/static/images/MicrosoftTeams-image (1).png" alt="">
+      <label for="avatar">
+        <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="add_a_photo" />
+        <input type="file" name="" id="avatar">
+      </label>
+    </div>
+
+    <app-input [placeholder]="'Nome'" [type]="'text'" [icon]="'person'" [value]="''"/>
+    <app-input [placeholder]="'E-mail'" [type]="'text'" [icon]="'mail'" [value]="''"/>
+    <app-input [placeholder]="'Senha Atual'" [type]="'password'" [icon]="'lock'" [value]="''"/>
+    <app-input [placeholder]="'Nova Senha'" [type]="'password'" [icon]="'lock'" [value]="''"/>
+
+    <app-button [title]="'Salvar'" />
+  </form>
+</div>

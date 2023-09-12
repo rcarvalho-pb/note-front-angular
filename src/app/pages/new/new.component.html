@@ -11,10 +11,22 @@
       <app-input [placeholder]="'Título'" />
       <app-text-area [placeholder]="'Observações'" />
       <app-section [title]="'Links Úteis'" />
-      <app-note-item *ngFor="let link of note?.links" [value]="link" />
+      <app-note-item *ngFor="let link of note.links" [value]="link.link"/>
       <app-note-item
         [placeholder]="'Novo Link'"
+        [isNew]="true"
       />
+
+      <app-section [title]="'Marcadores'" />
+      <div class="tags">
+        <app-note-item *ngFor="let tag of note.tags" [value]="tag.url"/>
+        <app-note-item
+          [placeholder]="'Nova Tag'"
+          [isNew]="true"
+        />
+      </div>
+
+      <app-button [title]="'Salvar'"/>
     </form>
   </main>
 </div>

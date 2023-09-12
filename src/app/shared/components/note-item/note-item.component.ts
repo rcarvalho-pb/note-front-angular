@@ -12,7 +12,7 @@ export interface NoteItem {
   styleUrls: ['./note-item.component.scss']
 })
 export class NoteItemComponent {
-  @Input() value?: Partial<Note>;
+  @Input() value?: string;
   @Input() placeholder?: string;
   @Input() isNew?: boolean;
 

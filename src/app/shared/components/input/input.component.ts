@@ -9,4 +9,5 @@ export class InputComponent {
   @Input() public placeholder?: string;
   @Input() public type?: string;
   @Input() public icon?: string;
+  @Input() public value?: string;
 }

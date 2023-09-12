@@ -5,5 +5,5 @@ export interface User {
   email: string,
   password: string,
   role: string,
-  notes: Note[]
+  notes: Partial<Note>[]
 }
