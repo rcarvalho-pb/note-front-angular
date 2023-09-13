@@ -3,7 +3,7 @@ import { Link } from 'src/app/shared/model/link.model';
 import { Note } from 'src/app/shared/model/note.model';
 
 @Component({
-  selector: 'app-new',
+  selector: 'New',
   templateUrl: './new.component.html',
   styleUrls: ['./new.component.scss']
 })

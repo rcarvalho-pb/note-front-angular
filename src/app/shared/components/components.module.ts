@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+
 import { HeaderComponent } from './header/header.component';
 import { ButtonComponent } from './button/button.component';
 import { ButtonTextComponent } from './button-text/button-text.component';
@@ -12,6 +14,7 @@ import { TextAreaComponent } from './text-area/text-area.component';
 import { InputComponent } from './input/input.component';
 
 import { MatIconModule } from '@angular/material/icon';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -23,11 +26,13 @@ import { MatIconModule } from '@angular/material/icon';
     SectionComponent,
     TagComponent,
     TextAreaComponent,
-    InputComponent
+    InputComponent,
+    NotFoundComponent
   ],
   imports: [
     CommonModule,
-    MatIconModule
+    MatIconModule,
+    FormsModule
   ],
   exports: [
     HeaderComponent,

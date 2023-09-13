@@ -7,7 +7,7 @@
     <app-input
       [placeholder]="'E-mail'"
       [type]="'text'"
-      [icon]="'mail'"
+      [icon]="'mail'" 
     />
     <app-input 
       [placeholder]="'Senha'"
@@ -17,6 +17,7 @@
 
     <app-button 
       [title]="'Entrar'"
+      (click)="handleSignin($event)"
     />
 
     <a href="">Criar conta</a>

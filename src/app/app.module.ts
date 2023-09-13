@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -21,7 +22,9 @@ import { PagesModule } from './pages/pages.module';
     ReactiveFormsModule,
     MatIconModule,
     ComponentsModule,
-    PagesModule
+    PagesModule,
+    HttpClientModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
