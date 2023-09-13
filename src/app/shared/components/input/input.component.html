@@ -1,6 +1,6 @@
 <div class="input">
   
-  <mat-icon *ngIf="true" aria-hidden="false" aria-label="Example home icon" fontIcon={{icon}} style="width: 30%;"/>
+  <mat-icon *ngIf="!(icon === '' || icon === undefined)" aria-hidden="false" aria-label="Example home icon" fontIcon={{icon}} />
   
   <input
     [type]="type"
