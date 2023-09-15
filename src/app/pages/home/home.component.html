@@ -1,28 +1,22 @@
 <div class="container">
   <div class="brand">
-    <h1>Someone's Notes</h1>
+    <a routerLink="/" routerLinkActive="router-link-active" >
+      <h1>Someone's Notes</h1>
+    </a>
   </div>
 
   <app-header />
 
   <ul class="menu">
-    <li><app-button-text [title]="'Todos'" [isActive]="true" /></li>
-    <li><app-button-text [title]="'React'" /></li>
-    <li><app-button-text [title]="'NodeJS'" /></li>
+    <li *ngFor="let note of notes"><app-button-text [title]="note.title" routerLink="/home/details" routerLinkActive="active"/></li>
   </ul>
 
-  <div class="search">
-    <app-input [placeholder]="'Pesquisar pelo título'" [icon]="'search'"/>
-  </div>
-
   <div class="content">
-    <app-section [title]="'Minhas Notas'">
-
-    </app-section>
-    <app-note *ngFor="let note of notes" [note]="note" />
+    <router-outlet />
   </div>
+  
 
-  <a class="newNote" href="">
+  <a class="newNote" routerLink="/new" routerLinkActive="active" >
     <mat-icon class="icon" aria-hidden="false" aria-label="Example home icon" fontIcon="add"/>
     Criar nota
   </a>

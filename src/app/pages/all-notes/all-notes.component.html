@@ -1,0 +1,10 @@
+<div class="search">
+  <app-input [placeholder]="'Pesquisar pelo título'" [icon]="'search'"/>
+</div>
+
+<div class="content">
+  <app-section [title]="'Minhas Notas'">
+
+  </app-section>
+  <app-note *ngFor="let note of notes" [note]="note" />
+</div>

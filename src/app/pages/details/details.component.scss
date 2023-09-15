@@ -1,19 +1,10 @@
 .container {
   width: 100%;
   height: 100vh;
+  padding: 64px 64px 0;
 
   display: grid;
   grid-template-rows: 105px auto;
-  grid-template-areas: 
-  "header"
-  "content";
-
-  > main {
-    grid-area: content;
-    overflow-y: scroll;
-    scrollbar-width: 1px;
-    padding: 64px 0;
-  }
 }
 
 .links {
@@ -54,9 +45,4 @@
 
 .tags {
   display: flex;
-}
-
-main::-webkit-scrollbar {
-  width: 0; /* Remove scrollbar space */
-  background: transparent; /* Optional: just make scrollbar invisible */
 }

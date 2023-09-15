@@ -8,8 +8,8 @@
   grid-template-areas:
     "brand header"
     "menu search"
-    "menu content"
-    "newnote content";
+    "menu search"
+    "newnote search";
 
   background-color: var(--BACKGROUND_800);
 }
@@ -24,35 +24,48 @@
   border-bottom: 1px solid var(--BACKGROUND_700);
 
   background-color: var(--BACKGROUND_900);
+  
+  > a {
 
-  > h1 {
-    font-size: 24px;
-    color: var(--ORANGE);
+    > h1 {
+      font-size: 24px;
+      color: var(--ORANGE);
+    }
   }
 }
 
 .menu {
   grid-area: menu;
   background-color: var(--BACKGROUND_900);
+  overflow-y: scroll;
 
-  padding-top: 64px;
+  padding-top: 32px;
   text-align: center;
 
   > li {
     margin-bottom: 24px;
     
   }
-}
 
-.search {
-  grid-area: search;
-  padding: 64px 64px 0;
+  &::-webkit-scrollbar {
+    width: 0; /* Remove scrollbar space */
+    background: transparent; /* Optional: just make scrollbar invisible */    
+  }
 }
 
 .content {
-  grid-area: content;
-  padding: 0 64px;
-  overflow-y: auto;
+  grid-area: search;
+  overflow-y: scroll;
+  padding: 32px 0 12px;
+  
+  > router-outlet {
+    display: none;
+  }
+
+  &::-webkit-scrollbar {
+    width: 0; /* Remove scrollbar space */
+    background: transparent; /* Optional: just make scrollbar invisible */
+  }
 }
 
 .newNote {

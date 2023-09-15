@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { AppRoutingModule } from './../../app-routing.module';
 
 import { HeaderComponent } from './header/header.component';
 import { ButtonComponent } from './button/button.component';
@@ -32,7 +33,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
   imports: [
     CommonModule,
     MatIconModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
   exports: [
     HeaderComponent,

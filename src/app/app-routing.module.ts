@@ -1,27 +1,42 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { NotFoundComponent } from './shared/components/not-found/not-found.component';
 import { HomeComponent } from './pages/home/home.component';
-import { SigninComponent } from './pages/signin/signin.component';
+import { AllNotesComponent } from './pages/all-notes/all-notes.component';
+import { DetailsComponent } from './pages/details/details.component';
+import { NotFoundComponent } from './shared/components/not-found/not-found.component';
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'home',
     component: HomeComponent,
+    children: [
+      {
+        path: '',
+        component: AllNotesComponent
+      },
+      {
+        path: 'details',
+        component: DetailsComponent
+      }
+
+    ]
+  },
+  {
+    path: '',
+    redirectTo: 'home',
     pathMatch: 'full'
   },
   {
-    path: 'login',
-    component: SigninComponent
-  },
-  {
-    path: '*',
+    path: '**',
     component: NotFoundComponent
   }
-];
+]
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
+  providers: [
+    
+  ]
 })
 export class AppRoutingModule { }
